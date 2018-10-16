@@ -57,10 +57,10 @@ Hello, {{{ $name }}}.
 </html>
 
 {# Use Tintin Layout #}
-#extends('layouts.master')
+#extends('layouts.app')
 
 #block('sidebar')
-  <p>This is appended to the master sidebar.</p>
+  <p>Sidebar content </p>
 #endblock
 
 #block('content')
@@ -69,7 +69,6 @@ Hello, {{{ $name }}}.
 
 {# inject section #}
 #inject('content', 'Default Content')
-
 {# If Statement #}
 #if (count($records) === 1)
   I have one record!
@@ -82,8 +81,9 @@ Hello, {{{ $name }}}.
 #endif
 
 <ul class="list #if (count($records) === 1) extra-class #endif">
-  <li>This is the first item</li>
-  <li>This is the second item</li>
+  #loop($messages as $message)
+    <li>{{ $message }}</li>
+  #endloop
 </ul>
 
 #isset($name)
