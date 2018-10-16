@@ -56,7 +56,7 @@ Hello, {{{ $name }}}.
 </body>
 </html>
 
-{# Use Blade Layout #}
+{# Use Tintin Layout #}
 #extends('layouts.master')
 
 #block('sidebar')
@@ -67,8 +67,8 @@ Hello, {{{ $name }}}.
   <p>This is my body content.</p>
 #endblock
 
-{# yield section #}
-#inject('section', 'Default Content')
+{# inject section #}
+#inject('content', 'Default Content')
 
 {# If Statement #}
 #if (count($records) === 1)
@@ -110,8 +110,8 @@ Hello, {{{ $name }}}.
 {# Single line if statement #}
 #if($foo === true) <p>Text</p> #endif
 
-{# Quoted blade directive matching #}
+{# Quoted tintin directive matching #}
 <p class="first-class #if ($x == true) second-class #endif">Text</p>
 
 {# Complex conditional inline #}
-<p class="first-class #if(($x == true) && ($y == "yes")) second-class #endif">Text</p>
+<p class="first-class #if (($x == true) && ($y == "yes")) second-class #endif">Text</p>
