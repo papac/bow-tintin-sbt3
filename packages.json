@@ -10,21 +10,9 @@
 			"labels": ["php", "Bow", "Tintin", "language syntax"],
 			"releases": [
 				{
-					"sublime_text": "<=3083",
+					"sublime_text": ">=3092",
 					"platforms": ["windows", "osx", "linux"],
 					"version": "1.0.0",
-					"url": "https://nodeload.github.com/papac/bow-tintin-sbt3/zip/1.0.0"
-				},
-				{
-					"sublime_text": "3084",
-					"platforms": ["windows", "osx", "linux"],
-					"version": "master",
-					"url": "https://nodeload.github.com/papac/bow-tintin-sbt3/zip/1.0.0"
-				},
-				{
-					"sublime_text": ">3084",
-					"platforms": ["windows", "osx", "linux"],
-					"version": "master",
 					"url": "https://nodeload.github.com/papac/bow-tintin-sbt3/zip/1.0.0"
 				}
 			]
