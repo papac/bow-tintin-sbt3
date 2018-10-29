@@ -31,30 +31,7 @@ Hello, {{{ $name }}}.
   #endphp
 </div>
 
-{# Inline PHP #}
-<div class="container">
-  #php(custom_function())
-</div>
-
 #include('footer')
-
-{# Define Blade Layout #}
-<html>
-<head>
-  <title>
-    #inject('title') - App Name
-  </title>
-</head>
-<body>
-  #block('sidebar')
-    This is the master sidebar.
-  #endblock
-
-  <div class="container">
-    #include('content')
-  </div>
-</body>
-</html>
 
 {# Use Tintin Layout #}
 #extends('layouts.app')
